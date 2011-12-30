@@ -1,0 +1,23 @@
+{
+  "type": "my",
+  "my": {
+    "conf": {
+      "customer": "vfuk",
+      "db": {"server": "localhost", "name": "mis_db", "user": "weng", "password": ""}
+    },
+    "tasks": [
+      {
+        "id": "test-ls",
+        "cmd": "ls -lah",
+        "priority": "high",
+        "status": "waiting"
+      },
+      {
+        "id": "test-echo",
+        "cmd": "echo 'aaa'",
+        "priority": "high",
+        "status": "waiting"
+      }
+    ]
+  }
+}

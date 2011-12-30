@@ -1,3 +1,6 @@
+/*
+ *
+ */
 package org.elasticsearch.plugin.river.my;
 
 import org.elasticsearch.common.inject.Inject;
@@ -10,6 +13,7 @@ public class MyRiverPlugin extends AbstractPlugin {
 
   @Inject
   public MyRiverPlugin() {
+
   }
 
   @Override

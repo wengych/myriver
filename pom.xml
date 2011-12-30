@@ -17,10 +17,8 @@
 
   <properties>
     <elasticsearch.version>0.18.5</elasticsearch.version>
+    <project.deploy.target>${HOME}/Library/elasticsearch-0.18.5/plugins/myriver/myriver.jar</project.deploy.target>
   </properties>
-
-  <repositories>
-  </repositories>
 
   <dependencies>
     <dependency>
@@ -90,6 +88,21 @@
             <goals>
               <goal>jar</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals> <goal>run</goal> </goals>
+            <configuration>
+              <target>
+                <copy file="target/${project.artifactId}-${project.version}.jar" tofile="${project.deploy.target}" />
+              </target>
+            </configuration>
           </execution>
         </executions>
       </plugin>

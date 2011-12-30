@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ *
  */
 package org.elasticsearch.river.my;
 
@@ -12,7 +11,7 @@ import org.elasticsearch.river.River;
  * @author weng
  */
 public class MyRiverModule extends AbstractModule {
-  
+
   @Override
   protected void configure() {
     bind(River.class).to(MyRiver.class).asEagerSingleton();
